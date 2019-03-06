@@ -1,0 +1,24 @@
+// Variables
+@import './modules/variables';
+
+// Mixins
+@import './modules/mixins';
+
+// Layouts
+@import './layouts/layouts';
+
+// Components
+@import './components/home';
+@import './components/header';
+@import './components/footer';
+
+// modules
+@import './modules/base';
+@import './modules/hover';
+@import './modules/animate';
+
+// media quaries
+@import './layouts//media';
+
+// Widths
+@import './layouts/widths';

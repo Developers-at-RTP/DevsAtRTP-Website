@@ -1,0 +1,47 @@
+// TODO: Explain
+$layouts: (6 6) (10) (1 3 1) (1 11) (3 6 2 1) (8 1) (11 1) (4 4 4) (1 10 1);
+
+@function getCustomLayoutValues($values...) {
+    $templateColumns: "";
+
+    @each $set in $values {
+        $length: length($set);
+
+        @if $length==1 {
+            $templateColumns: add_per($set);
+        }
+
+        @else {
+            $templateColumns: add_fr($set);
+        }
+    }
+
+    @return $templateColumns;
+}
+
+@function add_per($set) {
+    $columns: "";
+
+    @each $value in $set {
+        $columns: #{$columns} $value * 10%;
+    }
+
+    @return $columns;
+}
+
+@function add_fr($set) {
+    $columns: "";
+
+    @each $value in $set {
+        $columns: #{$columns} $value+fr;
+    }
+
+    @return $columns;
+}
+
+@each $layout in $layouts {
+    [custom-layout="#{$layout}"] {
+        display: grid;
+        grid-template-columns: getCustomLayoutValues($layout);
+    }
+}
