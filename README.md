@@ -1,6 +1,6 @@
 # devsrtp
 
-> website for devs@RTP
+> Website for devs@RTP
 
 ## Build Setup
 
