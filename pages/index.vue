@@ -1,45 +1,32 @@
 <template>
-  <div class="container">
+  <div class="container" v-maxWidth="'80vw'">
     <div class="background">
-      <header>
-        <!-- <HamMenu /> -->
-        <DevsLogo />
-      </header>
-      <main>
-        <Mission v-maxWidth="'80vw'" />
-        <LogoTableGroup />
-        <Offer v-maxWidth="'80vw'" />
-        <LogoJoinCommunity />
-      </main>
+      <DevsHeader/>
+      <Main/>
+      <Community/>
+      <Events/>
+      <DevsFooter/>
+      <Slack/>
     </div>
-    <aside>
-      <Slack v-maxWidth="'80vw'" />
-      <a href="https://www.meetup.com/DevsRTP/" target="_blank" rel="noopener noreferrer">Check Out Our Meetup Events</a>
-      <!-- <EventCalendar v-maxWidth="'80vw'" /> -->
-    </aside>
   </div>
 </template>
 
 <script>
-import HamMenu from "~/components/HamMenu.vue";
-import DevsLogo from "~/components/DevsLogo.vue";
-import Mission from "~/components/Mission.vue";
-import LogoTableGroup from "~/components/LogoTableGroup.vue";
-import Offer from "~/components/Offer.vue";
-import LogoJoinCommunity from "~/components/LogoJoinCommunity.vue";
+import DevsHeader from "~/components/DevsHeader.vue";
+import Main from "~/components/Main.vue";
+import Community from "~/components/Community.vue";
+import Events from "~/components/Events.vue";
 import Slack from "~/components/Slack.vue";
-import EventCalendar from "~/components/EventCalendar.vue";
+import DevsFooter from "~/components/DevsFooter.vue";
 
 export default {
   components: {
-    HamMenu,
-    DevsLogo,
-    Mission,
-    LogoTableGroup,
-    Offer,
-    LogoJoinCommunity,
+    DevsHeader,
+    Main,
+    Community,
+    Events,
     Slack,
-    EventCalendar
+    DevsFooter
   }
 };
 </script>
@@ -49,7 +36,7 @@ body {
   font-family: "Ubuntu", Courier, monospace;
   font-size: 16px;
 }
-.background{
+/* html{ */
   /* background: rgb(240, 254, 249); */
   /* background: linear-gradient(
     180deg,
@@ -59,10 +46,12 @@ body {
     rgb(155, 177, 210) 75%,
     rgba(37, 34, 92, 1) 100%
   ); */
-  background: rgb(240,254,249);
+  /* background: rgb(240,254,249);
 background: linear-gradient(0deg, rgba(240,254,249,1) 0%, rgba(240,254,249,1) 63%, rgba(255,255,255,1) 100%);
-  background-repeat: no-repeat;
-}
+  background-repeat: no-repeat; */
+
+  /* background-image: linear-gradient(to bottom, #fff, #ebfef7, #e8fcfb, #e7fafd, #e7f8ff, #eaf5ff, #d6e1f2, #c6cde4, #bab8d5, #938fb6, #6e6997, #494479, #25225c); */
+/* } */
 .container {
   margin: auto;
 }
@@ -78,9 +67,7 @@ background: linear-gradient(0deg, rgba(240,254,249,1) 0%, rgba(240,254,249,1) 63
   max-width: 80vw;
   margin: 2em auto;
 }
-.illustration_max {
-  width: 100vw;
-}
+
 .midText {
   font-size: 1.2em;
   margin-bottom: 1em;
