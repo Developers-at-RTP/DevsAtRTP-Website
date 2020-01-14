@@ -1,0 +1,84 @@
+<template>
+  <aside alt="Devs@RTP Teens" class="teens">
+    <img src="~/assets/imgs/Teens.svg" class="teens-img" alt="Developers at RTP Teens logo">
+    <p class="text">We strongly support youth in learning coding and sharing knowledge. 
+        Devs@RTP Teens encourages young adults to collaborate and engage in coding activities.</p>
+    <a class="teens-link" href="http://itkido.com/devsrtpteens/devsrtpteens.html" target="_blank" rel="noopener noreferrer">Learn About Devs@RTP Teens</a>
+  </aside>
+</template>
+
+<script>
+export default {
+  name: 'Teens',
+};
+</script>
+
+<style lang='scss'>
+  .teens{
+    background-color: #17144B;
+    margin: -2px auto 2em;
+    padding: 1.5em 2em;
+    text-align: center;
+    color: white;
+  }
+
+    .teens-img{
+        margin: 1em;
+    }
+
+    // animation is slow so you can see it, but probably should be .25 or .15
+    $thetransition: all .5s cubic-bezier(1,.25,0,.75) 0s;
+
+    .teens-link{
+        color: white;
+        text-decoration: none;
+        position: relative;
+        
+        &:before, &:after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            bottom: 0;
+            left: 0;
+            -webkit-transition: $thetransition;
+            transition: $thetransition;
+        }
+
+        &:before {
+            background-color: #ff5776;
+            -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+        }
+
+        &:after {
+            background-color: #fff;
+            -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+            visibility: hidden;
+        }
+
+        &:focus {
+            outline: none;
+            border: 1px solid white;
+            border-bottom: none;
+            border-radius: 3px;
+            padding: 1px;
+        }
+
+        &:hover, &:focus {
+            color: #ff5776;
+
+            &:before {
+                -webkit-transform: scaleX(0);
+                transform: scaleX(0);
+            }
+
+            &:after {
+                visibility: visible;
+                -webkit-transform: scaleX(1);
+                transform: scaleX(1);
+            }
+        }
+    }
+</style>
