@@ -1,9 +1,15 @@
 @media only screen and (min-width: 550px) {
-    * {
-        color: pink;
-    }
     .main{
         margin: auto;
+    }
+}
+@media only screen and (min-width: 800px) {
+    .teen-container {
+        display: grid;
+        grid-template-columns: 3fr 6fr;
+        .teens-img{
+            margin: auto;
+        }
     }
 }
 
@@ -22,6 +28,14 @@
     }
     .right {
         grid-area: right;
+    }
+
+    .community-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .community-info {
+        margin: auto;
     }
 }
 @media only screen and (min-width: 850px) {

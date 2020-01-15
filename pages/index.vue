@@ -47,13 +47,12 @@ export default {
   background: linear-gradient(180deg, #25225c 0%, #6c4aa4 100%);
   color: white;
   text-align: center;
-  padding: 2em;
+  // padding: 2em;
 }
 
-// .bottomSVG {
-//   background-image: url("~assets/imgs/gradientSkylineSmall.svg");
-//   background-repeat: no-repeat;
-//   background-position: bottom;
-//   
-// }
+.bottomSVG {
+  background-image: url("~assets/imgs/gradientSkyline.svg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
 </style>

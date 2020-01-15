@@ -53,7 +53,7 @@
 @import "~assets/css/main.scss";
 
 .slack {
-  margin: 2em auto;
+  padding: 2em 0;
 }
 
 .slack-img {

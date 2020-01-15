@@ -2,9 +2,11 @@
   <aside alt="Devs@RTP Teens" class="teens">
     <div class="teen-container">
         <img src="~/assets/imgs/Teens.svg" class="teens-img" alt="Developers at RTP Teens logo">
-        <p class="text">Devs@RTP Teens encourages young adults to collaborate and engage in coding activities.</br>
-            We strongly support youth in learning coding and sharing knowledge.</p>
-        <a class="teens-link" href="http://itkido.com/devsrtpteens/devsrtpteens.html" target="_blank" rel="noopener noreferrer">Learn About Devs@RTP Teens</a>
+        <div>
+            <p class="text">Devs@RTP Teens encourages young adults to collaborate and engage in coding activities.</br>
+                We strongly support youth in learning coding and sharing knowledge.</p>
+            <a class="teens-link" href="http://itkido.com/devsrtpteens/devsrtpteens.html" target="_blank" rel="noopener noreferrer">Learn About Devs@RTP Teens</a>
+        </div>
     </div>
   </aside>
 </template>
@@ -26,7 +28,7 @@ export default {
     color: white;
     
     .teen-container{
-        max-width: 600px;
+        max-width: 900px;
         margin: auto;
     }
   }

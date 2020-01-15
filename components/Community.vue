@@ -1,13 +1,17 @@
 <template>
   <section aria-label="Join the Devs@RTP Community" class="community">
-    <img
-      class="illustration"
-      src="~/assets/imgs/PeopleJumping.svg"
-      alt="People jumping joyfully in a group"
-    />
-    <h3>SOCIAL EVENTS</h3>
-    <p>Find our social events in the #outings channel on Slack!</p>
-    <JoinSlack />
+    <div class="community-container">
+      <img
+        class="illustration community-img"
+        src="~/assets/imgs/PeopleJumping.svg"
+        alt="People jumping joyfully in a group"
+      />
+      <div class="community-info">
+        <h3>SOCIAL EVENTS</h3>
+        <p class="comminity-text">Find our social events in the #outings channel on Slack!</p>
+        <JoinSlack />
+      </div>
+    </div>
   </section>
 </template>
 
@@ -28,5 +32,19 @@ export default {
   color: white;
   text-align: center;
   padding: 2em;
+  margin-bottom: -2px;
+
+  .community-container{
+    max-width: 900px;
+    margin: auto;
+  }
+
+  .community-img{
+    max-width: 400px;
+  }
+
+  .comminity-text{
+    padding: 15px 0 0;
+  }
 }
 </style>

@@ -27,7 +27,7 @@ export default {
 
 <style lang="scss">
 .container-main {
-  margin: 30px 15px 55px;
+  margin: 30px 15px 0;
   text-align: left;
 }
 .headerCommunity {
