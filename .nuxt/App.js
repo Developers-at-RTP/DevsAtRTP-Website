@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import NuxtLoading from './components/nuxt-loading.vue'
-import NuxtBuildIndicator from './components/nuxt-build-indicator'
 
 import '../assets/css/main.css'
 
@@ -11,7 +10,7 @@ import _6f6c098b from '../layouts/default.vue'
 const layouts = { "_default": _6f6c098b }
 
 export default {
-  head: {"title":"devsrtp","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":"website for devs@RTP"},{"hid":"mobile-web-app-capable","name":"mobile-web-app-capable","content":"yes"},{"hid":"apple-mobile-web-app-title","name":"apple-mobile-web-app-title","content":"devsrtp"},{"hid":"author","name":"author","content":"Maria Lamardo"},{"hid":"theme-color","name":"theme-color","content":"#fff"},{"hid":"og:type","name":"og:type","property":"og:type","content":"website"},{"hid":"og:title","name":"og:title","property":"og:title","content":"devsrtp"},{"hid":"og:site_name","name":"og:site_name","property":"og:site_name","content":"devsrtp"},{"hid":"og:description","name":"og:description","property":"og:description","content":"website for devs@RTP"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"},{"rel":"manifest","href":"\u002F_nuxt\u002Fmanifest.23373a8e.json"},{"rel":"shortcut icon","href":"\u002F_nuxt\u002Ficons\u002Ficon_64.9mld2VBMsQ$.png"},{"rel":"apple-touch-icon","href":"\u002F_nuxt\u002Ficons\u002Ficon_512.9mld2VBMsQ$.png","sizes":"512x512"}],"style":[],"script":[],"htmlAttrs":{"lang":"en"}},
+  head: {"title":"devsrtp","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":"website for devs@RTP"},{"hid":"mobile-web-app-capable","name":"mobile-web-app-capable","content":"yes"},{"hid":"apple-mobile-web-app-title","name":"apple-mobile-web-app-title","content":"devsrtp"},{"hid":"author","name":"author","content":"Maria Lamardo"},{"hid":"theme-color","name":"theme-color","content":"#fff"},{"hid":"og:type","name":"og:type","property":"og:type","content":"website"},{"hid":"og:title","name":"og:title","property":"og:title","content":"devsrtp"},{"hid":"og:site_name","name":"og:site_name","property":"og:site_name","content":"devsrtp"},{"hid":"og:description","name":"og:description","property":"og:description","content":"website for devs@RTP"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"},{"rel":"manifest","href":"\u002FDevsAtRTP-Website\u002F_nuxt\u002Fmanifest.43d52d6a.json"},{"rel":"shortcut icon","href":"\u002FDevsAtRTP-Website\u002F_nuxt\u002Ficons\u002Ficon_64.9mld2VBMsQ$.png"},{"rel":"apple-touch-icon","href":"\u002FDevsAtRTP-Website\u002F_nuxt\u002Ficons\u002Ficon_512.9mld2VBMsQ$.png","sizes":"512x512"}],"style":[],"script":[],"htmlAttrs":{"lang":"en"}},
 
   render(h, props) {
     const loadingEl = h('NuxtLoading', { ref: 'loading' })
@@ -42,7 +41,7 @@ export default {
       domProps: {
         id: '__nuxt'
       }
-    }, [loadingEl, h(NuxtBuildIndicator), transitionEl])
+    }, [loadingEl, transitionEl])
   },
   data: () => ({
     isOnline: true,
@@ -101,8 +100,6 @@ export default {
     },
 
     setLayout(layout) {
-      if(layout && typeof layout !== 'string') throw new Error('[nuxt] Avoid using non-string value as layout property.')
-
       if (!layout || !layouts['_' + layout]) {
         layout = 'default'
       }
