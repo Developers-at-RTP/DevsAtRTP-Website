@@ -50,6 +50,8 @@
 </script>
 
 <style lang="scss">
+@import "~assets/css/main.scss";
+
 .slack {
   margin: 2em auto;
 }
@@ -74,7 +76,7 @@
 
   &::before {
     content: "";
-    background-color: #ff5776;
+    background-color: $pink;
     border-radius: .3em;
     width: 100%;
     height: 100%;

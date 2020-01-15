@@ -3,7 +3,9 @@
    <h2 class="events-header">Join the Next Devs@RTP Event</h2>
    <p class="text">Attend one of our events to meet the group members and make new friends</p>
    <img class="illustration" src="~/assets/imgs/GroupWithDog.svg" alt="People talking in a group">
-   <a class="events-link" href="https://www.meetup.com/DevsRTP/" target="_blank" rel="noopener noreferrer">Check Out Our Meetup Events</a>
+   <div>
+    <a class="events-link" href="https://www.meetup.com/DevsRTP/" target="_blank" rel="noopener noreferrer">Check Out Our Meetup Events</a>
+   </div>
   </aside>
 </template>
 
@@ -14,6 +16,7 @@ export default {
 </script>
 
 <style lang='scss'>
+@import "~assets/css/main.scss";
   .events{
     max-width: 80vw;
     text-align: center;
@@ -53,7 +56,7 @@ export default {
     }
 
     &:after {
-        background-color: #ff5776;
+        background-color: $pink;
         -webkit-transform: scaleX(0);
         transform: scaleX(0);
         visibility: hidden;

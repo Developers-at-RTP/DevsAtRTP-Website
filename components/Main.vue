@@ -1,6 +1,6 @@
 <template>
-  <main>
-    <img class="illustration" src="~/assets/imgs/TableGroup.svg" alt="People working at a table" />
+  <main class="main">
+    <img class="illustration right" src="~/assets/imgs/TableGroup.svg" alt="People working at a table" />
     <div class="container-main">
       <h2 class="headerCommunity">We love our community</h2>
       <p class="text"
@@ -27,7 +27,8 @@ export default {
 
 <style lang="scss">
 .container-main {
-  margin: 30px 15px;
+  margin: 30px 15px 55px;
+  text-align: left;
 }
 .headerCommunity {
   font-size: 1.3em;

@@ -1,9 +1,11 @@
 <template>
   <aside alt="Devs@RTP Teens" class="teens">
-    <img src="~/assets/imgs/Teens.svg" class="teens-img" alt="Developers at RTP Teens logo">
-    <p class="text">We strongly support youth in learning coding and sharing knowledge. 
-        Devs@RTP Teens encourages young adults to collaborate and engage in coding activities.</p>
-    <a class="teens-link" href="http://itkido.com/devsrtpteens/devsrtpteens.html" target="_blank" rel="noopener noreferrer">Learn About Devs@RTP Teens</a>
+    <div class="teen-container">
+        <img src="~/assets/imgs/Teens.svg" class="teens-img" alt="Developers at RTP Teens logo">
+        <p class="text">Devs@RTP Teens encourages young adults to collaborate and engage in coding activities.</br>
+            We strongly support youth in learning coding and sharing knowledge.</p>
+        <a class="teens-link" href="http://itkido.com/devsrtpteens/devsrtpteens.html" target="_blank" rel="noopener noreferrer">Learn About Devs@RTP Teens</a>
+    </div>
   </aside>
 </template>
 
@@ -14,16 +16,23 @@ export default {
 </script>
 
 <style lang='scss'>
+@import "~assets/css/main.scss";
+
   .teens{
     background-color: #17144B;
     margin: -2px auto 2em;
-    padding: 1.5em 2em;
+    padding: 2em;
     text-align: center;
     color: white;
+    
+    .teen-container{
+        max-width: 600px;
+        margin: auto;
+    }
   }
 
     .teens-img{
-        margin: 1em;
+        margin-bottom: 1em;
     }
 
     // animation is slow so you can see it, but probably should be .25 or .15
@@ -46,7 +55,7 @@ export default {
         }
 
         &:before {
-            background-color: #ff5776;
+            background-color: $pink;
             -webkit-transform: scaleX(1);
             transform: scaleX(1);
         }
@@ -67,7 +76,7 @@ export default {
         }
 
         &:hover, &:focus {
-            color: #ff5776;
+            color: $pink;
 
             &:before {
                 -webkit-transform: scaleX(0);

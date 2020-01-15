@@ -20,10 +20,12 @@ export default {
 <style lang='scss'>
   .Devs_RTP{
     margin: 1em auto 3em;
+    text-align: left;
+    max-width: 900px;
     
     img {
-      max-width: 60vw;
-      margin-bottom: 1em;
+      max-width: 200px;
+      margin: 1em;
     }
   }
   .mission{

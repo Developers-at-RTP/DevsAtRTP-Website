@@ -1,0 +1,44 @@
+@media only screen and (min-width: 550px) {
+    * {
+        color: pink;
+    }
+    .main{
+        margin: auto;
+    }
+}
+
+@media only screen and (min-width: 850px) {
+    * {
+        color: purple;
+    }
+    // MAIN
+    .main{
+        display: grid;
+        grid-template-areas: "left right";
+        grid-gap: 5em;
+    }
+    .container-main {
+        grid-area: left;
+    }
+    .right {
+        grid-area: right;
+    }
+}
+@media only screen and (min-width: 850px) {
+    * {
+        color: white;
+    }
+    // MAIN
+    .text{
+        font-size: 14px;
+    }
+}
+@media only screen and (min-width: 950px) {
+    * {
+        color: white;
+    }
+    // MAIN
+    .main{
+        max-width: 900px;
+    }
+}
