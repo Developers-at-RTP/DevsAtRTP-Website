@@ -6,6 +6,7 @@ const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
 } : {}
 
 export default {
+  ...routerBase,
   mode: 'universal',
   /*
   ** Headers of the page
@@ -63,6 +64,5 @@ export default {
     */
     extend(config, ctx) {
     }
-  },
-  ...routerBase
+  }
 }
