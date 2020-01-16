@@ -39,9 +39,9 @@ export default {
     margin: auto;
   }
 
-  .community-img{
-    max-width: 400px;
-  }
+  // .community-img{
+  //   max-width: 400px;
+  // }
 
   .comminity-text{
     padding: 15px 0 0;

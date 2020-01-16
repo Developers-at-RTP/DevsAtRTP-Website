@@ -1,21 +1,25 @@
-importScripts('/DevsAtRTP-Website/_nuxt/workbox.4c4f5ca6.js')
+importScripts('/_nuxt/workbox.4c4f5ca6.js')
 
 workbox.precaching.precacheAndRoute([
   {
-    "url": "/DevsAtRTP-Website/_nuxt/138950ec1b2c2b62984d.js",
-    "revision": "90fa3491e86a6161ca014de2602e5aca"
+    "url": "/_nuxt/0024477e7dbebd85a2a0.js",
+    "revision": "5e49ec2251aa93fa48ad3818761e55f6"
   },
   {
-    "url": "/DevsAtRTP-Website/_nuxt/33577ca33d0a2a6df4a4.js",
+    "url": "/_nuxt/33577ca33d0a2a6df4a4.js",
     "revision": "88ae0b1694ff5de459ced71f42b58dfa"
   },
   {
-    "url": "/DevsAtRTP-Website/_nuxt/8f8522f339d514320e1f.js",
-    "revision": "a392c39a46cc073253cedc0cbf87778f"
+    "url": "/_nuxt/519ee06cd2f79deafb32.js",
+    "revision": "bae1104a6a8c9056f5a4518b5a48f454"
   },
   {
-    "url": "/DevsAtRTP-Website/_nuxt/c2634ee009c9c74b98cb.js",
-    "revision": "d0e4d3bf0097357f94bf5892d0a2cf1e"
+    "url": "/_nuxt/87fada5d443c3c5949b3.js",
+    "revision": "71441796686e6392f3e3a5a62e687192"
+  },
+  {
+    "url": "/_nuxt/fbe87db2311eeb1fb379.js",
+    "revision": "2aeb6b67c25c33e8895d444164a417a3"
   }
 ], {
   "cacheId": "devsrtp",
@@ -26,6 +30,6 @@ workbox.precaching.precacheAndRoute([
 workbox.clientsClaim()
 workbox.skipWaiting()
 
-workbox.routing.registerRoute(new RegExp('/DevsAtRTP-Website/_nuxt/.*'), workbox.strategies.cacheFirst({}), 'GET')
+workbox.routing.registerRoute(new RegExp('/_nuxt/.*'), workbox.strategies.cacheFirst({}), 'GET')
 
-workbox.routing.registerRoute(new RegExp('/DevsAtRTP-Website/.*'), workbox.strategies.networkFirst({}), 'GET')
+workbox.routing.registerRoute(new RegExp('/.*'), workbox.strategies.networkFirst({}), 'GET')

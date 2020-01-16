@@ -1,12 +1,12 @@
 // only add `router.base = '/<repository-name>/'` if `DEPLOY_ENV` is `GH_PAGES`
-const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
-  router: {
-    base: '/DevsAtRTP-Website/'
-  }
-} : {}
+// const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
+//   router: {
+//     base: '/DevsRTP/'
+//   }
+// } : {}
 
 export default {
-  ...routerBase,
+  // ...routerBase,
   mode: 'universal',
   /*
   ** Headers of the page

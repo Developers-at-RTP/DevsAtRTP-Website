@@ -14,6 +14,7 @@ export default {
 <style lang='scss'>
   .Devs_RTP{
     margin: 0 auto 3em;
+    padding: 0 2em;
     text-align: left;
     max-width: 900px;
     
