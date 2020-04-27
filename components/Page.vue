@@ -1,3 +1,4 @@
+<!-- Main component used to render top-level content defined in Story Blok (called 'stories') -->
 <template>
   <div v-editable="blok">
     <component :key="blok._uid" v-for="blok in blok.body" :blok="blok" :is="blok.component | dashify"></component>
