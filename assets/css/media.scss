@@ -4,6 +4,17 @@
     }
 }
 @media only screen and (min-width: 800px) {
+
+    .half-section {
+        .container {
+            display: grid;
+            grid-template-columns: 3fr 6fr;
+            .img{
+                margin: auto;
+            }
+        }
+    }
+
     .teen-container {
         display: grid;
         grid-template-columns: 3fr 6fr;
@@ -14,9 +25,9 @@
 }
 
 @media only screen and (min-width: 850px) {
-    * {
+    /** {
         color: purple;
-    }
+    }*/
     // MAIN
     .main{
         display: grid;
@@ -30,6 +41,22 @@
         grid-area: right;
     }
 
+    .home-section {
+        .container{
+            /*display: grid;
+            grid-template-columns: 1fr 1fr;*/
+            display: flex;
+            flex-direction: row;
+
+            &.reverse {
+                flex-direction: row-reverse;
+            }
+        }
+        .info {
+            margin: auto;
+        }
+    }
+
     .community-container{
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -39,18 +66,18 @@
     }
 }
 @media only screen and (min-width: 850px) {
-    * {
+    /** {
         color: white;
-    }
+    }*/
     // MAIN
     .text{
         font-size: 14px;
     }
 }
 @media only screen and (min-width: 950px) {
-    * {
+    /** {
         color: white;
-    }
+    }*/
     // MAIN
     .main{
         max-width: 900px;

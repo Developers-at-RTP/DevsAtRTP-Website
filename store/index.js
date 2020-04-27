@@ -1,62 +1,17 @@
+export const state = () => ({
+  cacheVersion: ''
+})
 
-// import Vue from 'vue'
-import Vuex from 'vuex'
-
-// Vue.use(Vuex)
-
-const createdStore = () => {
-  return new Vuex.Store({
-    state: () => ({
-      // logo: "~/assets/imgs/DevsLogoW.svg"
-    }),
-    mutations: {
-      increment (state) {
-        state.counter++
-      }
-    },
-    modules: {
-      main: {
-        namespaced: true,
-        state: () => ({
-          logo: "~/assets/imgs/DevsLogoW.svg"
-        }),
-        mutations: {
-          add (state, { text }) {
-            state.list.push({
-              text,
-              done: false
-            })
-          },
-          remove (state, { todo }) {
-            state.list.splice(state.list.indexOf(todo), 1)
-          },
-          toggle (state, { todo }) {
-            todo.done = !todo.done
-          }
-        }
-      },
-      teens: {
-        namespaced: true,
-        state: () => ({
-          list: []
-        }),
-        mutations: {
-          add (state, { text }) {
-            state.list.push({
-              text,
-              done: false
-            })
-          },
-          remove (state, { todo }) {
-            state.list.splice(state.list.indexOf(todo), 1)
-          },
-          toggle (state, { todo }) {
-            todo.done = !todo.done
-          }
-        }
-      }
-    }
-  })
+export const mutations = {
+  setCacheVersion (state, version) {
+    state.cacheVersion = version
+  }
 }
 
-export default createdStore
+export const actions = {
+  loadCacheVersion ({ commit }) {
+    return this.$storyapi.get(`cdn/spaces/me`).then((res) => {
+      commit('setCacheVersion', res.data.space.version)
+    })
+  }
+}

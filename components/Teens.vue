@@ -13,11 +13,11 @@
   </aside>
 </template>
 
-<script>
-export default {
-  name: "Teens"
-};
-</script>
+// <script>
+// export default {
+//   name: "Teens"
+// };
+// </script>
 
 <style lang='scss'>
 @import "~assets/css/main.scss";
