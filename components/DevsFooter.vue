@@ -29,7 +29,6 @@ export default {
 </script>
 
 <style lang='scss'>
-@import "~assets/css/main.scss";
 
 .footer {
   background-color: #17144b;

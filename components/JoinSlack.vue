@@ -50,7 +50,7 @@
 </script>
 
 <style lang="scss">
-@import "~assets/css/main.scss";
+@import '~/assets/css/variables.scss';
 
 .slack {
   padding: 2em 0;

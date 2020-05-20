@@ -1,19 +1,30 @@
 <template>
-  <aside v-bind:aria-label="blok.aria_label" class="home-section" v-bind:class="[ blok.color_background ? 'color-background' : '']">
-    <div class="container" v-bind:class="[blok.image_position == 'left' ? 'reverse' : '']">
+  <aside v-bind:aria-label="blok.aria_label" class="home-section" v-bind:class="[ blok.color_background ? 'color-background' : '']" :style="containerCSS">
+    <div class="container" v-bind:class="[blok.image_position == 'left' ? 'reverse' : '']" >
       <div class="info">
         <h2 class="title">{{ blok.title }}</h2>
         <p class="blurb text">{{ blok.blurb }}</p>
-        <a class="link" v-bind:href="blok.call_to_action_link" target="_blank" rel="noopener noreferrer">{{blok.call_to_action}}</a>
+        <a class="link" v-if="blok.call_to_action != ''" v-bind:href="blok.call_to_action_link" target="_blank" rel="noopener noreferrer">{{blok.call_to_action}}</a>
       </div>
-      <img class="illustration" v-bind:src="blok.image" v-bind:alt="blok.image_alt">
+      <img class="illustration" v-if="blok.use_image" v-bind:src="blok.image" v-bind:alt="blok.image_alt">
+    </div>
+    <div class="container">
+      <component :key="blok._uid" v-for="blok in blok.other_content" :blok="blok" :is="blok.component | dashify"></component>
     </div>
   </aside>
 </template>
 
 <script>
 export default {
-  props: ['blok']
+  props: ['blok'],
+  computed: {
+      containerCSS () {
+        return {
+          /* variables you want to pass to css */
+          '--custom-background-color': this.blok.background_color.color,
+        }
+    }
+  }
 }
 </script>
 
@@ -26,6 +37,7 @@ $thetransition: all .5s cubic-bezier(1,.25,0,.75) 0s;
   text-align: center;
   padding: 2em;
   color: black !important;
+  background-color: var(--custom-background-color);
 
   .link {
       margin: 1em auto;
@@ -140,19 +152,6 @@ $thetransition: all .5s cubic-bezier(1,.25,0,.75) 0s;
       }
     }
 
-  }
-
-  .container {
-    max-width: 80vw;
-    margin: auto;
-  }
-
-  /*.title {
-    font-family: "Trocchi", serif;
-  }*/
-
-  .blurb {
-    text-align: center;
   }
 
   .img {

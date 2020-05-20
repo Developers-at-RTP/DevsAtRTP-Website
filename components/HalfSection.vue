@@ -23,7 +23,7 @@ export default {
 </script>-->
 
 <style lang='scss'>
-@import "~assets/css/main.scss";
+@import '~/assets/css/variables.scss';
 
 // animation is slow so you can see it, but probably should be .25 or .15
 $thetransition: all 0.5s cubic-bezier(1, 0.25, 0, 0.75) 0s;

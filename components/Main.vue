@@ -26,6 +26,8 @@ export default {
 </script>
 
 <style lang="scss">
+@import "~assets/css/main.scss";
+
 .container-main {
   margin: 30px 15px 0;
   text-align: left;

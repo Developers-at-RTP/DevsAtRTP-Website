@@ -30,13 +30,5 @@ html {
   border-radius: 10px;
   margin: 10px 5px;
 }
-
-.grid {
-  display: flex;
-}
-
-.column {
-  flex: 1;
-}
 </style>
 
