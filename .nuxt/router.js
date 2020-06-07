@@ -2,8 +2,8 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import { interopDefault } from './utils'
 
-const _19b174b4 = () => interopDefault(import('../pages/teens/index.vue' /* webpackChunkName: "pages/teens/index" */))
-const _5afa126a = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
+const _0d777a3c = () => interopDefault(import('../pages/teens/index.vue' /* webpackChunkName: "pages/teens/index" */))
+const _48d2c9d0 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
 Vue.use(Router)
 
@@ -81,11 +81,11 @@ export function createRouter() {
 
     routes: [{
       path: "/teens",
-      component: _19b174b4,
+      component: _0d777a3c,
       name: "teens"
     }, {
       path: "/",
-      component: _5afa126a,
+      component: _48d2c9d0,
       name: "index"
     }],
 

@@ -7,9 +7,6 @@
           <Main />
         </div>
       </div>
-    <div>
-      <Teens />
-    </div>
     <Events />
     <Community />
     <DevsFooter />
