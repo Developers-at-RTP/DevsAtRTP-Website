@@ -1,7 +1,7 @@
 <template>
   <div class="slack">
     <a
-      href="https://join.slack.com/t/devsrtp/shared_invite/zt-71u0vws6-pIMLlLfm12F9T6aVxjkNTQ"
+      href="http://devsrtp.slack.com/"
       class="slack-link linkLined"
       target="_blank"
       rel="noopener noreferrer"
