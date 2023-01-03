@@ -18,7 +18,7 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/pwa": "^2.6.0",
-    "nuxt": "^2.0.0"
+    "nuxt": "^2.15.8"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^0.0.1",
@@ -41,6 +41,6 @@
     "node-sass": "^4.13.0",
     "nodemon": "^1.18.9",
     "sass-loader": "^8.0.2",
-    "vue-jest": "^3.0.3"
+    "vue-jest": "^4.0.1"
   }
 }
